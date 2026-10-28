@@ -1,0 +1,62 @@
+name: Check special usage resets
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reset-notifier-state
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - name: Detect and notify
+        id: notify
+        run: npm start
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          RESET_API_URL: ${{ vars.RESET_API_URL || 'https://claude-resets.com/api/resets' }}
+          DRY_RUN: 'false'
+          ALLOW_PROVISIONAL_EVENTS: ${{ vars.ALLOW_PROVISIONAL_EVENTS || 'false' }}
+          ALLOW_UPSTREAM_EVENTS: ${{ vars.ALLOW_UPSTREAM_EVENTS || 'false' }}
+      # Preserve already-sent checkpoints when a later Slack send fails.
+      - name: Commit state
+        if: ${{ always() && steps.notify.outcome != 'skipped' && steps.notify.outcome != '' }}
+        shell: bash
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- state/seen-events.json state/incident-events.json; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- state/seen-events.json state/incident-events.json
+          git commit -m 'chore: checkpoint reset notification state'
+          git push origin "HEAD:$DEFAULT_BRANCH"
+      - name: Preserve recovery checkpoint on failure
+        if: ${{ failure() && steps.notify.outcome != 'skipped' && steps.notify.outcome != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: reset-state-recovery-${{ github.run_id }}
+          path: |
+            state/seen-events.json
+            state/incident-events.json
+          retention-days: 7

@@ -1,0 +1,10 @@
+{
+  "incidents": [{
+    "id": "test-claude", "name": "Elevated errors",
+    "status": "identified", "impact": "minor",
+    "created_at": "2026-10-28T08:00:00.123456+00:00", "updated_at": "2026-10-28T08:05:00.123Z", "resolved_at": null,
+    "started_at": "2026-10-28T07:55:00.000Z",
+    "components": [{ "id": "code-component", "name": "Claude Code", "status": "degraded_performance" }],
+    "incident_updates": [{ "status": "identified", "body": "We identified an issue affecting requests.", "created_at": "2026-10-28T08:05:00.123Z", "affected_components": [{ "code": "code-component", "name": "Claude Code" }] }]
+  }]
+}

@@ -1,0 +1,9 @@
+{
+  "page": { "id": "test-openai", "name": "OpenAI" },
+  "incidents": [{
+    "id": "test-codex", "name": "Codex CLI authentication failures",
+    "status": "investigating", "impact": "major",
+    "created_at": "2026-10-28T08:00:00Z", "updated_at": "2026-10-28T08:00:00Z", "resolved_at": null,
+    "incident_updates": [{ "status": "investigating", "body": "We are investigating Codex CLI login failures.", "created_at": "2026-10-28T08:00:00Z" }]
+  }]
+}

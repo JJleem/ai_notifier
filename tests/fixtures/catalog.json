@@ -1,0 +1,6 @@
+{
+  "providers": {
+    "claude": { "name": "Claude", "events": [] },
+    "codex": { "name": "Codex", "events": [] }
+  }
+}

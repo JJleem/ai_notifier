@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "initializedAt": {
+    "openai": null,
+    "anthropic": null
+  },
+  "incidents": {}
+}
