@@ -550,6 +550,19 @@
       "recoveryNotificationSent": false,
       "suppressOutage": true,
       "suppressRecovery": true
+    },
+    "anthropic:kw2lxj1th04c": {
+      "provider": "anthropic",
+      "incidentId": "kw2lxj1th04c",
+      "originalStatus": "resolved",
+      "lastKnownStatus": "resolved",
+      "firstDetectedAt": "2026-11-08T09:34:54.521Z",
+      "lastCheckedAt": "2026-11-08T09:34:54.521Z",
+      "sourceUpdatedAt": "2026-11-08T08:54:43.776Z",
+      "outageNotificationSent": false,
+      "recoveryNotificationSent": true,
+      "suppressOutage": true,
+      "suppressRecovery": false
     }
   }
 }
