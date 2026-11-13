@@ -563,6 +563,32 @@
       "recoveryNotificationSent": true,
       "suppressOutage": true,
       "suppressRecovery": false
+    },
+    "anthropic:nn11wk485zfn": {
+      "provider": "anthropic",
+      "incidentId": "nn11wk485zfn",
+      "originalStatus": "resolved",
+      "lastKnownStatus": "resolved",
+      "firstDetectedAt": "2026-11-13T15:30:11.187Z",
+      "lastCheckedAt": "2026-11-13T15:30:11.187Z",
+      "sourceUpdatedAt": "2026-11-13T11:58:45.676Z",
+      "outageNotificationSent": false,
+      "recoveryNotificationSent": true,
+      "suppressOutage": true,
+      "suppressRecovery": false
+    },
+    "anthropic:34wq7gxnxvvm": {
+      "provider": "anthropic",
+      "incidentId": "34wq7gxnxvvm",
+      "originalStatus": "investigating",
+      "lastKnownStatus": "investigating",
+      "firstDetectedAt": "2026-11-13T15:30:11.187Z",
+      "lastCheckedAt": "2026-11-13T15:30:11.187Z",
+      "sourceUpdatedAt": "2026-11-13T14:36:13.854Z",
+      "outageNotificationSent": true,
+      "recoveryNotificationSent": false,
+      "suppressOutage": false,
+      "suppressRecovery": false
     }
   }
 }
