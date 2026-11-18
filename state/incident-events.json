@@ -602,6 +602,19 @@
       "recoveryNotificationSent": true,
       "suppressOutage": true,
       "suppressRecovery": false
+    },
+    "anthropic:6prv10gjdpz1": {
+      "provider": "anthropic",
+      "incidentId": "6prv10gjdpz1",
+      "originalStatus": "resolved",
+      "lastKnownStatus": "resolved",
+      "firstDetectedAt": "2026-11-18T02:22:00.368Z",
+      "lastCheckedAt": "2026-11-18T02:22:00.368Z",
+      "sourceUpdatedAt": "2026-11-18T01:44:40.807Z",
+      "outageNotificationSent": false,
+      "recoveryNotificationSent": true,
+      "suppressOutage": true,
+      "suppressRecovery": false
     }
   }
 }
