@@ -615,6 +615,19 @@
       "recoveryNotificationSent": true,
       "suppressOutage": true,
       "suppressRecovery": false
+    },
+    "anthropic:c1kmrkmv5f3d": {
+      "provider": "anthropic",
+      "incidentId": "c1kmrkmv5f3d",
+      "originalStatus": "resolved",
+      "lastKnownStatus": "resolved",
+      "firstDetectedAt": "2026-11-19T17:43:38.585Z",
+      "lastCheckedAt": "2026-11-19T17:43:38.585Z",
+      "sourceUpdatedAt": "2026-11-19T09:33:18.914Z",
+      "outageNotificationSent": false,
+      "recoveryNotificationSent": true,
+      "suppressOutage": true,
+      "suppressRecovery": false
     }
   }
 }
