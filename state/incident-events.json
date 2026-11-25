@@ -654,6 +654,32 @@
       "recoveryNotificationSent": true,
       "suppressOutage": true,
       "suppressRecovery": false
+    },
+    "openai:01M898HVZGXFV2XC4775CG9GF8": {
+      "provider": "openai",
+      "incidentId": "01M898HVZGXFV2XC4775CG9GF8",
+      "originalStatus": "resolved",
+      "lastKnownStatus": "resolved",
+      "firstDetectedAt": "2026-11-25T18:42:21.347Z",
+      "lastCheckedAt": "2026-11-25T18:42:21.347Z",
+      "sourceUpdatedAt": "2026-11-25T16:12:21Z",
+      "outageNotificationSent": false,
+      "recoveryNotificationSent": true,
+      "suppressOutage": true,
+      "suppressRecovery": false
+    },
+    "openai:01M89RGC3STKK2MT53TXHFMY4H": {
+      "provider": "openai",
+      "incidentId": "01M89RGC3STKK2MT53TXHFMY4H",
+      "originalStatus": "monitoring",
+      "lastKnownStatus": "monitoring",
+      "firstDetectedAt": "2026-11-25T18:42:21.347Z",
+      "lastCheckedAt": "2026-11-25T18:42:21.347Z",
+      "sourceUpdatedAt": "2026-11-25T16:58:51Z",
+      "outageNotificationSent": true,
+      "recoveryNotificationSent": false,
+      "suppressOutage": false,
+      "suppressRecovery": false
     }
   }
 }
