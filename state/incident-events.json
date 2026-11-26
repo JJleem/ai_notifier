@@ -672,12 +672,12 @@
       "provider": "openai",
       "incidentId": "01M89RGC3STKK2MT53TXHFMY4H",
       "originalStatus": "monitoring",
-      "lastKnownStatus": "monitoring",
+      "lastKnownStatus": "resolved",
       "firstDetectedAt": "2026-11-25T18:42:21.347Z",
-      "lastCheckedAt": "2026-11-25T18:42:21.347Z",
-      "sourceUpdatedAt": "2026-11-25T16:58:51Z",
+      "lastCheckedAt": "2026-11-26T19:51:47.106Z",
+      "sourceUpdatedAt": "2026-11-26T14:07:54Z",
       "outageNotificationSent": true,
-      "recoveryNotificationSent": false,
+      "recoveryNotificationSent": true,
       "suppressOutage": false,
       "suppressRecovery": false
     }
