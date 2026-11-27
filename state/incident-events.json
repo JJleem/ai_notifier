@@ -680,6 +680,19 @@
       "recoveryNotificationSent": true,
       "suppressOutage": false,
       "suppressRecovery": false
+    },
+    "anthropic:0x1yvzkfmmxj": {
+      "provider": "anthropic",
+      "incidentId": "0x1yvzkfmmxj",
+      "originalStatus": "resolved",
+      "lastKnownStatus": "resolved",
+      "firstDetectedAt": "2026-11-27T11:21:28.657Z",
+      "lastCheckedAt": "2026-11-27T11:21:28.657Z",
+      "sourceUpdatedAt": "2026-11-27T10:49:33.823Z",
+      "outageNotificationSent": false,
+      "recoveryNotificationSent": true,
+      "suppressOutage": true,
+      "suppressRecovery": false
     }
   }
 }
